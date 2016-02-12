@@ -1,0 +1,10 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="test.dbus.interface">
+    <method name="sendMessage">
+      <arg name="message" type="a(ii)" direction="in"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="Message"/>
+    </method>
+  </interface>
+</node>
+
