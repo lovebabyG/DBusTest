@@ -1,12 +1,21 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="Demo.MyMessage">
-    <!--method name="sendMessage">
-      <arg name="message" type="a(ii)" direction="in"/>
+    <method name="sendMessage">
+      <arg name="message" type="a(iiis)"/>
       <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="Message"/>
-    </method-->
+    </method>
+    <method name="sendMessage2">
+      <arg name="message" type="a(ii)"/>
+      <!--annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="QList&lt;Message>"/-->
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="messageList"/>
+    </method>
     <method name="sendSignal">
       <arg name="signal" type="s"/>
+    </method>
+    <method name="sendSignal2">
+      <arg name="signal2" type="ai"/>
+      <annotation name="org.qtproject.QtDBus.QtTypeName.In0" value="QList&lt;int>"/>
     </method>
   </interface>
 </node>

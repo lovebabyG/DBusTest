@@ -17,14 +17,14 @@ public:
 
 private slots:
     void onSenderButtonSendClicked();
+    void onSenderButton2Clicked();
+    void onSenderButton3Clicked();
     void onSenderButtonClearClicked();
-
-protected:
-    void timerEvent(QTimerEvent *event);
 
 private:
     DemoMyMessageInterface *senderInterface;
     QPushButton *m_pushButtonSend;
+    QPushButton *m_pushButtonSend2;
     QPushButton *m_pushButtonClear;
     QLineEdit   *m_lineEdit;
 };

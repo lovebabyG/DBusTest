@@ -2,13 +2,13 @@
 #include <QtWidgets>
 #include "MyMessageInterface.h"
 #include "sender.h"
-
+#include "../Message/message.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    //Message::registerMetaType();
+    Message::registerMetaType();
 
     sender s;
     s.show();

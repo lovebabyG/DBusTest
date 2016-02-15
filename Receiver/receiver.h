@@ -4,7 +4,7 @@
 #include <QObject>
 #include <QWidget>
 
-#include "message.h"
+#include "../Message/message.h"
 
 class QLabel;
 class QTextEdit;
@@ -16,8 +16,10 @@ public:
     Receiver(QWidget *parent = 0);
 
 public Q_SLOTS:
-    void sendSignal(Message msg);
+    void sendMessage(Message message);
     void sendSignal(QString string);
+    void sendSignal2(const QList<int> &signal2);
+    void sendMessage2(messageList message);
 
 private:
     QLabel *m_label;

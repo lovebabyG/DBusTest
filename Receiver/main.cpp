@@ -5,14 +5,14 @@
 
 #include "receiver.h"
 #include "MyMessageAdaptor.h"
-#include "message.h"
+#include "../Message/message.h"
 
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
-    //Message::registerMetaType();
+    Message::registerMetaType();
 
     MyMessageAdaptor *pReceiverAdaptor = NULL;
     Receiver *receiver = new Receiver();

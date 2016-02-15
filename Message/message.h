@@ -11,7 +11,7 @@ class MESSAGESHARED_EXPORT Message
 {
 public:
     Message();
-    Message(const int& m_iNornum, const int &m_iCallType);
+    Message(const int iNornum, const int iCallType, const int iCount, QString strDateTime);
     Message(const Message &other);
     Message& operator=(const Message &other);
     ~Message();
@@ -21,6 +21,8 @@ public:
 
     int getNornum() const;
     int getCallType() const;
+    int getCount() const;
+    QString getDateTime() const;
 
     //register Message with the Qt type system
     static void registerMetaType();
@@ -28,8 +30,13 @@ public:
 private:
     int m_iNornum;
     int m_iCallType;
+    int m_iCount;
+    QString m_strDateTime;
 };
 
+typedef QList<Message> messageList;
+
 Q_DECLARE_METATYPE(Message)
+Q_DECLARE_METATYPE(messageList)
 
 #endif // MESSAGE_H
